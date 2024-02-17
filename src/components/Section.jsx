@@ -1,12 +1,10 @@
 import FeedbackOptions from './FeedbackOptions'
 import Statistics from './Statistics'
-import React, { Component } from 'react'
+import React from 'react'
 
-export default class Section extends Component {
-    render() {
-        const { good, neutral, bad, onLeaveFeedback, title} = this.props
-    return (
-      <><h2>{ title} </h2>
+export default function Section({ good, neutral, bad, onLeaveFeedback, title}) {
+  return (
+    <><h2>{ title} </h2>
             <FeedbackOptions onLeaveFeedback={ onLeaveFeedback} />
             <Statistics
                 good={good}
@@ -16,9 +14,10 @@ export default class Section extends Component {
                 positivePercentage={ 100* good /(good + neutral + bad)}
             />
           </>
-    )
-  }
+  )
 }
+
+
 
 
 
