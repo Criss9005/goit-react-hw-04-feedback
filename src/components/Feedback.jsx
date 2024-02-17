@@ -9,7 +9,6 @@ export default class Feedback extends Component {
         bad: 0,
         total: 0,
         positiveFeedback: 0,
-            
     };
         
     handleFeddback = (param) => {
